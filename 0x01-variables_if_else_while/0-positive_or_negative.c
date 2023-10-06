@@ -9,7 +9,7 @@
  * variable n & prints if n is +ve or -ve
  *
  * Return: The return value is 0
- * */
+ */
 int main(void)
 {
 	int n;
@@ -23,6 +23,6 @@ int main(void)
 	else if (n > 0)
 	printf("%d is positive\n", (n));
 	else if (n == 0)
-	printf("%d is zero\n", (n));	
+	printf("%d is zero\n", (n));
 	return (0);
 }
