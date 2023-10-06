@@ -8,11 +8,13 @@
  */
 int main(void)
 {
-	int i = 0;
+	int i = 48;
 	/* beginning of the while loop */
-	while (i <= 0)
-	putchar(i);
-	i++;
+	while (i < 58)
+	{
+		putchar(i);
+		i++;
+	}
 	putchar('\n');
 	return (0);
 }
