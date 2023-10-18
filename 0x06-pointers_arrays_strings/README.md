@@ -3,5 +3,5 @@
 * in the parameters of a function
 
 ## MORE INFO
-* Scope of variables will also be looked at
+* Scope of variables will also be looked at.
 
