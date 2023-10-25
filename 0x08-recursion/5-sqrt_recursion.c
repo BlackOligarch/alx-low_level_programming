@@ -15,7 +15,7 @@ int power_root(int n, int c)
 	{
 		return (c);
 	}
-	else if (c * c > 4)
+	else if (c * c > n)
 	{
 		return (-1);
 	}
