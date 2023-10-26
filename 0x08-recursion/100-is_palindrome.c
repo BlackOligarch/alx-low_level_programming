@@ -35,3 +35,16 @@ int compare_string(char *s, int left, int right)
 	}
 	return (0);
 }
+/**
+ * is_palindrome - detects if a string is a palindrome
+ *
+ * @s: the string to test
+ *
+ * Return: 1 if it is a pilndrome else return 0.
+ */
+int is_palindrome(char *s)
+{
+	if (*s  == '\0')
+		return (1);
+	return (compare_string(s, 0, _strlen_recursion(s - 1)));
+}
