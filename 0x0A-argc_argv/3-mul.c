@@ -1,46 +1,29 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _atoi - converts a string to an integer
+ * main - Entry point of the program
  *
- * @s: is the string to be converted
+ * @argc: The no. of command-line arguments
+ * @argv: Array of command-line argument strings
  *
- * Return: the int converted from the string
+ * Return: 0 on success, 1 on error
  */
 
-int _atoi(char *s)
+int main(int argc, char *argv[])
 {
-	int i = 0;
-	int d = 0;
-	int n = 0;
-	int length = 0;
-	int f = 0;
-	int digit = 0;
+	int num1, num2, results;
 
-	while (s[length] != '\0')
-		len++;
-
-	while (i < length && f == 0)
+	if (argc != 3)
 	{
-		if (s[i] == '-')
-			++d;
-
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			digit = s[i] - '0';
-			if (d % 2)
-				digit = -digit;
-			n = n * 10 + digit;
-			f = 1;
-			if (s[i + 1] < '0' || s[i + 1] > '9')
-				break;
-			f = 0;
-		}
-		i++;
+		printf("Error\n");
+		return (1);
 	}
-	if (f == 0)
-		return (0);
 
-	return (n);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	result = num1 * num2;
+
+	printf("%d\n", results);
+
+	return (0);
 }
