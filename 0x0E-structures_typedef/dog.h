@@ -1,5 +1,5 @@
-#ifndef _HEADER_
-#define _HEADER_
+#ifndef DOG_HEADER_
+#define DOG_HEADER_
 
 /**
   * struct dog - Dog's characteristics
@@ -7,7 +7,7 @@
   * @age: The age of the dog.
   * @owner: The owner of the dog.
   *
-  * Description: The attributes of a dog.
+  * Description: The characteristics of a dog.
   */
 
 struct dog
@@ -27,5 +27,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
 
 #endif
