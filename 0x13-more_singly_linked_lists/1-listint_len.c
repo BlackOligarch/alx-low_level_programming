@@ -1,23 +1,25 @@
 #include "lists.h"
 
 /**
- * add_nodeint - It inserts a node at the beginning of the list
- * @head: a pointer to the head node
- * @value: the integer value to store
+ * listint_len - It returns the number of elements in a linked list
+ * @head: the head node
  *
- * Return: a pointer to the new head, else NULL on failure.
+ * Return: the number of elements in a linked list of integers
  */
 
-listint_t *add_nodeint(listint_t **head, const int value)
+size_t listint_len(const listint_t *head)
 {
-	listint_t *new_node = malloc(sizeof(listint_t));
+	size_t node_count = 0;
 
-	if (new_node == NULL)
-		return (NULL); /* If memory allocation for new node failed */
+	if (head == NULL)
+		return (0); /* If the list is empty */
 
-	new_node->n = value;
-	new_node->next = *head;
-	*head = new_node;
+	/* If list is not empty, get the number of elements */
+	while (head != NULL)
+	{
+		node_count++;
+		head = head->next;
+	}
 
-	return (new_node);
+	return (node_count);
 }
