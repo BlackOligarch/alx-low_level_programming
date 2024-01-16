@@ -15,7 +15,7 @@
 /* GLOBAL OPCODE TOKENS */
 extern char **op_toks;
 
-
+/* The DATA STRUCTURES FOR THE PROJECT */
 /**
  * struct stack_s - a doubly linked list representation of a stack (or queue)
  * @n: integer
