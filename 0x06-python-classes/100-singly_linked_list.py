@@ -2,9 +2,13 @@
 
 
 class Node:
-    """ Node class for a singly linked list """
+    """
+    Node class for a singly linked list
+    """
     def __init__(self, data, next_node=None):
-        """ initialization called when instance of class created """
+        """
+        initialization called when instance of class created
+        """
         if self.__validate_data(data):
             self.__data = data
         if self.__validate_node(next_node):
@@ -12,36 +16,48 @@ class Node:
 
     @property
     def data(self):
-        """ get the data attribute """
+        """
+        get the data attribute
+        """
         return self.__data
 
     @data.setter
     def data(self, value):
-        """set the data attribute """
+        """
+        set the data attribute
+        """
         if self.__validate_data(value):
             self.__data = value
 
     @property
     def next_node(self):
-        """ get the node attribute """
+        """
+        get the node attribute
+        """
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        """set the node attribute """
+        """
+        set the node attribute
+        """
         if self.__validate_node(value):
             self.__next_node = value
 
     def __validate_data(self, data):
-        """validates the data, checking its type """
-        """ Returns true or false if valid or not respectively """
+        """
+        validates the data, checking its type
+        Returns true or false if valid or not respectively
+        """
         if isinstance(data, int):
             return True
         return False
 
     def __validate_node(self, node):
-        """validates the node, checking it's a node object"""
-        """ Returns true or false if valid or not respectively"""
+        """
+        validates the node, checking it's a node object
+        Returns true or false if valid or not respectively
+        """
         if isinstance(node, Node) or node is None:
             return True
         return False
@@ -72,8 +88,10 @@ class SinglyLinkedList:
         return string
 
     def sorted_insert(self, value):
-        """inserts a new Node into the correct sorted position"""
-        """ (based on data) """
+        """
+        inserts a new Node into the correct sorted position
+                                            (based on data)
+        """
         tmp = self.__head
         if tmp is None:
             self.__head = Node(value)
