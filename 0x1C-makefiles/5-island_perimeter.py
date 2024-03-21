@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This module attempts to solve the Novel Island Perimeter coding challenge."""
+"""This module attempts to solve the Novel Island Perimeter coding challenge"""
 
 
 def island_perimeter(grid: "list[list]") -> int:
