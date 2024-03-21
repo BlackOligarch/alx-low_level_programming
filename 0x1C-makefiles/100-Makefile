@@ -1,0 +1,28 @@
+# This Makefile builds an exe file name `school` from the C objects
+# files. These object files are then linked to create the executable file.
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:%.c=%.o)
+NAME = school
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+.PHONY: all clean oclean fclean re
+
+# links object files & creates the executable
+all: m.h ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+
+# cleans up Vim & Emacs temporary files and the executable file
+clean:
+	-${RM} -f *~ ${NAME}
+
+# cleans up object files
+oclean:
+	-${RM} -f ${OBJ}
+
+# performs a full clean of objects, the exe and temporary files
+fclean: oclean clean
+
+# forces the recompilation and building of exe files
+re: oclean all
