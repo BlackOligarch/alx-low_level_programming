@@ -12,7 +12,7 @@
  * Return: index where value is located, or -1 on failure
  */
 int perform_linear_search(int *array, size_t size, int value, size_t prev,
-						  size_t jump)
+		size_t jump)
 {
 	while (array[prev] < value && prev < size)
 	{
